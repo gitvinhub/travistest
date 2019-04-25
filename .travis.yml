@@ -1,4 +1,11 @@
 language: go
-script:
-  - echo heloo
-  - env
+jobs:  
+  include:
+    - stage: "Tests"                # naming the Tests stage
+      name: "Unit Tests"            # names the first Tests stage job
+      script: echo hello
+    - script: echo Integration
+      name: "Integration Tests"     # names the second Tests stage job
+    - stage: deploy
+      name: "Deploy to GCP"
+      script: echo deploy
