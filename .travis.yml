@@ -7,5 +7,5 @@ jobs:
     - script: echo Integration
       name: "Integration Tests"     # names the second Tests stage job
     - stage: deploy
-      name: "Deploy to GCP"
-      script: echo deploy
+      name: "GET Docker version"
+      script: docker version
